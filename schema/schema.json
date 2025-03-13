@@ -1,0 +1,62 @@
+{
+  "instantiate": {
+    "token_name": {
+      "type": "string",
+      "description": "The name of the token being created"
+    },
+    "token_symbol": {
+      "type": "string",
+      "description": "The symbol of the token"
+    }
+  },
+  "execute": {
+    "Transfer": {
+      "recipient_stealth_address": {
+        "type": "string",
+        "description": "The recipient's stealth address where the token is transferred"
+      },
+      "amount": {
+        "type": "string",
+        "description": "The amount of tokens to transfer"
+      },
+      "zk_proof": {
+        "type": "string",
+        "description": "Zero-knowledge proof for privacy verification of transaction"
+      }
+    },
+    "GenerateStealthAddress": {
+      "public_key": {
+        "type": "string",
+        "description": "Public key used to generate a stealth address"
+      }
+    }
+  },
+  "query": {
+    "Balance": {
+      "address": {
+        "type": "string",
+        "description": "The address of the user requesting their balance"
+      },
+      "viewing_key": {
+        "type": "string",
+        "description": "The viewing key to unlock the private balance"
+      }
+    },
+    "TransactionHistory": {
+      "address": {
+        "type": "string",
+        "description": "The address of the user to fetch transaction history for"
+      },
+      "viewing_key": {
+        "type": "string",
+        "description": "The viewing key to access transaction history details"
+      }
+    },
+    "StealthAddress": {
+      "public_key": {
+        "type": "string",
+        "description": "Public key used to generate or query stealth address"
+      }
+    }
+  }
+}
