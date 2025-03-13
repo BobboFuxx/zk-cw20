@@ -1,0 +1,15 @@
+[package]
+name = "privacy_token"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cosmwasm-std = "1.1"
+cosmwasm-storage = "1.1"
+cosmwasm-schema = "1.1"
+serde = { version = "1.0", features = ["derive"] }
+schemars = "0.8"
+secp256k1 = "0.27"       # Stealth addresses
+halo2 = "0.2"            # zk-SNARK verification
+rand = "0.8"             # Random key generation
+thiserror = "1.0"        # Error handling
